@@ -1,0 +1,50 @@
+* > *{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #072842;
+    padding: 20px;
+    align-items: center;
+    
+    .Admin-user-profile{
+        display: flex;
+        gap: 40px;
+        color: #fff;
+    }
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 10px;
+    gap: 10px;
+}
+section :nth-child(n){
+    background-color: aqua;
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        grid-template-columns: 2fr 3fr;
+    }
+    section :nth-child(3){
+        display: none;
+    }
+    img[src="/img/Logo.png"]{
+        width: 100px;
+    }
+    .Admin-user-profile :nth-child(1){
+        display: none;
+    }   
+    .Admin-user-profile :nth-child(2){
+        width: 30px;
+    }
+}
+@media screen and (max-width: 300px) {
+    section {
+        grid-template-rows: 1fr;
+    }
+
+}
